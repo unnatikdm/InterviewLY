@@ -15,6 +15,7 @@ nltk.download('wordnet')
 
 
 def extract_audio(video_path, output_audio="output.wav"):
+    """Extracts audio from a video file using FFmpeg."""
     if not os.path.exists(video_path):
         print("❌ Error: Video file not found!")
         return None
@@ -32,6 +33,7 @@ def extract_audio(video_path, output_audio="output.wav"):
         return None
 
 def transcribe_audio(audio_path):
+    """Transcribes speech from an audio file using OpenAI Whisper."""
     if not os.path.exists(audio_path):
         print("❌ Error: Audio file not found!")
         return None
@@ -48,15 +50,17 @@ def transcribe_audio(audio_path):
         return None
 
 def analyze_text(text):
+    """Analyzes sentiment, filler words, and grammar issues in text."""
     print("📊 Performing text analysis...")
 
     blob = TextBlob(text)
     sentiment_score = blob.sentiment.polarity
 
- 
+    # Detect filler words
     fillers = ["uh","oh","ohh" "um", "like", "you know", "so", "actually", "basically", "literally"]
     hesitation_count = sum(len(re.findall(rf"\b{filler}\b", text, re.IGNORECASE)) for filler in fillers)
 
+    # Find grammar issues (negative polarity sentences)
     grammar_errors = [sentence for sentence in blob.sentences if sentence.sentiment.polarity < -0.3]
 
     return {
@@ -67,22 +71,23 @@ def analyze_text(text):
     }
 
 def analyze_video(video_path):
-    
+    """Runs full video analysis pipeline: Extract audio → Transcribe → Analyze."""
     print("🚀 Starting video analysis...")
 
-  
+    # Step 1: Extract Audio
     audio_path = extract_audio(video_path)
     if not audio_path:
         return
 
-   
+    # Step 2: Transcribe Audio
     transcript = transcribe_audio(audio_path)
     if not transcript:
         return
 
+    # Step 3: Analyze Transcription
     analysis = analyze_text(transcript)
 
-    
+    # Display Results
     print("\n🔹 TRANSCRIPTION 🔹\n")
     print(transcript)
     print("\n🔹 ANALYSIS 🔹\n")
@@ -93,6 +98,6 @@ def analyze_video(video_path):
     if analysis['grammar_issues']:
         print("\n🔻 Mistakes Found:\n" + "\n".join(analysis['grammar_issues']))
 
-video_path = "/content/WhatsApp Video 2025-03-01 at 2.57.42 AM.mp4" 
+# Run the analysis on your uploaded video
+video_path = "/content/WhatsApp Video 2025-03-01 at 2.57.42 AM.mp4"  # Change this if needed
 analyze_video(video_path)
-
