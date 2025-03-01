@@ -1,5 +1,7 @@
 import cv2
 import dlib
+!wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+
 
 # Load face detector and landmark predictor
 detector = dlib.get_frontal_face_detector()
