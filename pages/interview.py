@@ -1,4 +1,5 @@
 import streamlit as st
+st.write(f"Streamlit version: {st.__version__}")
 import os
 from moviepy.editor import VideoFileClip
 
