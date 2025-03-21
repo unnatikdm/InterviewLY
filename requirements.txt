@@ -1,6 +1,6 @@
 streamlit==1.28.0
 opencv-python-headless==4.8.1.78
-mediapipe==0.10.0
+mediapipe==0.10.21
 numpy==1.26.0
 matplotlib==3.8.0
 deepface==0.0.79
