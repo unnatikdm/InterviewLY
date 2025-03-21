@@ -77,7 +77,7 @@ st.markdown("""
 st.markdown('<div class="content-container">', unsafe_allow_html=True)
 
 # --- HUGE HUGE TITLE ---
-st.markdown('<h3 class="header-title">InterviewLY: Level Yourself!</h3>', unsafe_allow_html=True)
+st.markdown('<p class="header-title">InterviewLY: Level Yourself!</p>', unsafe_allow_html=True)
 
 # --- Start Interview Button (NAVIGATE TO INTERVIEW PAGE) ---
 if st.button("🎤 START INTERVIEW"):
