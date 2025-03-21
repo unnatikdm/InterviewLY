@@ -23,7 +23,7 @@ st.markdown("""
         padding: 20px;
     }
     .header-title {
-        font-size: 450px;
+        font-size: 250px;
         font-weight: 1000;
         color: #38BDF8;
         text-transform: uppercase;
