@@ -7,3 +7,9 @@ deepface==0.0.79
 moviepy==1.0.3
 faster-whisper==0.10.0
 textblob==0.17.1
+torch==2.0.1
+tensorflow==2.12.0
+Pillow==10.0.1
+scipy==1.11.3
+requests==2.31.0
+
