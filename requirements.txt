@@ -11,3 +11,4 @@ scipy==1.11.3
 requests==2.31.0
 gdown==4.7.1
 
+pip install streamlit-extras
