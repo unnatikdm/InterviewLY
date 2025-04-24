@@ -83,7 +83,7 @@ st.markdown('<p class="header-title">InterviewLY</p>', unsafe_allow_html=True)
 # --- Start Interview Button (NAVIGATE TO INTERVIEW PAGE) ---
 
 if st.button("🎤 START INTERVIEW"):
-    switch_page("interview")
+    switch_page("/pages/interview.py")
 
 # --- Analysis Conditions Section (ROW 1 WITH DIFFERENT COLUMNS) ---
 st.markdown("## 🧠 Analysis Conditions")
