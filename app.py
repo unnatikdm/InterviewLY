@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
 
 # --- Page Configuration ---
 st.set_page_config(page_title="InterviewLY", page_icon="💼", layout="wide")
@@ -80,8 +81,9 @@ st.markdown('<div class="content-container">', unsafe_allow_html=True)
 st.markdown('<p class="header-title">InterviewLY</p>', unsafe_allow_html=True)
 
 # --- Start Interview Button (NAVIGATE TO INTERVIEW PAGE) ---
+
 if st.button("🎤 START INTERVIEW"):
-    st.switch_page("pages/interview.py")
+    switch_page("interview")
 
 # --- Analysis Conditions Section (ROW 1 WITH DIFFERENT COLUMNS) ---
 st.markdown("## 🧠 Analysis Conditions")
