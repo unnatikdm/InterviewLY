@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import tempfile
 import subprocess
-#from faster_whisper import WhisperModel
+from faster_whisper import WhisperModel
 from textblob import TextBlob
 import re
 import logging
