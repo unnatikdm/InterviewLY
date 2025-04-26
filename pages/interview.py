@@ -194,11 +194,11 @@ if st.session_state.get("show_buttons", False):
     st.markdown("### 🛠️ Analysis Options")
     st.markdown('<div class="analysis-buttons">', unsafe_allow_html=True)
     analysis_pages = [
-        ("🧠 Sentiment Analysis", "sentiment.py"),
-        ("👁️ Eye Contact", "eyecontact.py"),
-        ("👨🏻‍💼 Posture Analysis", "posture.py"),
-        ("🖐️ Gesture Analysis", "gesture.py"),
-        ("🥹 Emotion Detection", "emotion.py")
+        ("🧠 Sentiment Analysis", "sentiment"),
+        ("👁️ Eye Contact", "eyecontact"),
+        ("👨🏻‍💼 Posture Analysis", "posture"),
+        ("🖐️ Gesture Analysis", "gesture"),
+        ("🥹 Emotion Detection", "emotion")
     ]
     for label, page in analysis_pages:
         if st.button(label):
