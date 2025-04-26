@@ -316,6 +316,4 @@ else:
     st.warning("⚠️ Please upload a video file first!")
 
 # --- Navigation ---
-st.markdown("---")
-if st.button("⬅️ Back to Interview Page"):
-    st.switch_page("pages/interview.py")
+
