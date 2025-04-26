@@ -252,5 +252,22 @@ else:
                     - Practice in front of a mirror to improve facial expressions.  
                     - Seek feedback from others to refine your expressions.
                 """)
+if st.session_state.get("show_buttons", False):
+    st.markdown("### 🛠️ Analysis Options")
+    st.markdown('<div class="analysis-buttons">', unsafe_allow_html=True)
+
+    analysis_pages = [
+        ("🧠 Sentiment Analysis", "sentiment"),
+        ("👁️ Eye Contact", "eyecontact"),
+        ("👨🏻‍💼 Posture Analysis", "posture"),
+        ("🖐️ Gesture Analysis", "gesture"),
+        ("🥹 Emotion Detection", "emotion")
+    ]
+
+    for label, page in analysis_pages:
+        if st.button(label):
+            switch_page(page)
+
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
