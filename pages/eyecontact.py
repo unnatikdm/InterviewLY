@@ -197,8 +197,3 @@ else:
                 - Practice with a friend or in front of a mirror.  
                 - Record yourself to identify areas for improvement.
             """)
-
-# --- Back Button ---
-st.markdown("---")
-if st.button("⬅️ Back to Interview Page"):
-    st.switch_page("pages/interview.py")
