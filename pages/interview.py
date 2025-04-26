@@ -202,7 +202,7 @@ if st.session_state.get("show_buttons", False):
     ]
     for label, page in analysis_pages:
         if st.button(label):
-            st.switch_page(f"pages/{page}")
+            st.switch_page(f"{page}")
     st.markdown('</div>', unsafe_allow_html=True)
 
 # --- Footer ---
