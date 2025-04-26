@@ -251,7 +251,4 @@ else:
                     - Seek feedback from others to refine your expressions.
                 """)
 
-# --- Back Button to Interview Page ---
-st.markdown("---")
-if st.button("⬅️ Back to Interview Page"):
-    st.switch_page("pages/interview.py")
+
