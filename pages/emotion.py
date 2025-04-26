@@ -4,7 +4,7 @@ import os
 import tempfile
 import numpy as np
 import matplotlib.pyplot as plt
-#from deepface import DeepFace
+from deepface import DeepFace
 from concurrent.futures import ThreadPoolExecutor
 
 # --- Page Configuration ---
@@ -97,7 +97,7 @@ def extract_frames(video_path, frame_rate=5):
 def analyze_frame(frame):
     """Detects emotions in a single frame using DeepFace."""
     try:
-        #analysis = DeepFace.analyze(frame, actions=["emotion"], enforce_detection=False)
+        analysis = DeepFace.analyze(frame, actions=["emotion"], enforce_detection=False)
         dominant_emotion = analysis[0]["dominant_emotion"]
         return dominant_emotion
     except Exception as e:
