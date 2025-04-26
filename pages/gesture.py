@@ -235,8 +235,3 @@ else:
                 - Practice using gestures to enhance communication.  
                 - Avoid keeping hands hidden or still.
             """)
-
-# --- Back Button ---
-st.markdown("---")
-if st.button("⬅️ Back to Interview Page"):
-    st.switch_page("pages/interview.py")
