@@ -114,19 +114,8 @@ st.markdown('<p class="title">🧍‍♂️ Posture Analysis</p>', unsafe_allow_
 
 # --- Get Video File ---
 # First try session state
-video_path = st.session_state.get("uploaded_video_path")
+video_path = st.session_state.get("uploaded_video_path", "uploaded_videos/converted-video.mp4")
 
-# If session reset, try reading last saved video path
-if not video_path or not os.path.exists(video_path):
-    try:
-        with open("uploaded_videos/last_video.txt", "r") as f:
-            video_path = f.read().strip()
-    except:
-        video_path = None
-
-if not video_path or not os.path.exists(video_path):
-    st.warning("⚠️ No video found! Please upload a video in the Interview Page.")
-    st.stop()
 
 if not os.path.exists(video_path):
     st.error("⚠️ No video found! Please record or upload a video in the Interview Page.")
