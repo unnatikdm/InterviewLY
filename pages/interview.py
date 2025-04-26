@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 from moviepy.editor import VideoFileClip
+from streamlit_extras.switch_page_button import switch_page
 
 # --- Page Configuration ---
 st.set_page_config(page_title="InterviewLY", page_icon="🎥", layout="wide")
