@@ -147,7 +147,20 @@ def generate_emotion_report(emotions):
 st.markdown('<p class="title">🎭 Emotion Detection</p>', unsafe_allow_html=True)
 
 # --- Get the last recorded/uploaded video ---
-video_path = st.session_state.get("uploaded_video_path", "uploaded_videos/converted-video.mp4")
+# First try session state
+video_path = st.session_state.get("uploaded_video_path")
+
+# If session reset, try reading last saved video path
+if not video_path or not os.path.exists(video_path):
+    try:
+        with open("uploaded_videos/last_video.txt", "r") as f:
+            video_path = f.read().strip()
+    except:
+        video_path = None
+
+if not video_path or not os.path.exists(video_path):
+    st.warning("⚠️ No video found! Please upload a video in the Interview Page.")
+    st.stop()
 
 # Debugging: Print the video path and check if it exists
 st.write(f"Video Path: {video_path}")
