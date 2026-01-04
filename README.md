@@ -140,16 +140,6 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - [API Reference](docs/API.md) - Module interfaces and extensions
 - [Research Paper](docs/RESEARCH_PAPER.md) - Academic foundation and methodology
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Team
-
-**Lead Developer**: Unnati Kadam  
-**Affiliation**: Third Year, Artificial Intelligence and Machine Learning  
-**Location**: Virar, Mumbai, India  
-**Contact**: unnatikadam50a@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -162,8 +152,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions, suggestions, or collaborations:
 - 📧 Email: unnatikadam50a@gmail.com
-- 💬 GitHub Issues: [Project Issues Page](https://github.com/yourusername/interviewly/issues)
-- 📖 Documentation: [Full Documentation](docs/)
 
 ---
 
